@@ -40,13 +40,10 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
                  position: slidingAnimation,
                  child: Text('Read Free Books',
                    textAlign: TextAlign.center,
-                   style: TextStyle(
-                       fontWeight: FontWeight.bold,
-                       fontSize: 25,
-                       color: splashTextColor),),
+
+                   ),
                );
              }),
-
 
       ],
     );
