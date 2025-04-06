@@ -33,11 +33,13 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(AssetsData.logo),
+
          AnimatedBuilder(animation: slidingAnimation,
              builder: (context,_){
               return SlideTransition(
                  position: slidingAnimation,
-                 child: Text('Read Free Books',textAlign: TextAlign.center,
+                 child: Text('Read Free Books',
+                   textAlign: TextAlign.center,
                    style: TextStyle(
                        fontWeight: FontWeight.bold,
                        fontSize: 25,
@@ -52,7 +54,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   void initSlidingAnimation(){
   animationController=  AnimationController(
   vsync:this,
-  duration: Duration(seconds: 1) );
+  duration:  const Duration(seconds: 1) );
   slidingAnimation= Tween<Offset>(
   begin: const Offset(0, 10) , end: Offset.zero)
       .animate(animationController);
